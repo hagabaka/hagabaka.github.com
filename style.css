@@ -1,0 +1,125 @@
+@import url(fonts.css);
+
+html, body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+body {
+  display: flex;
+  flex-flow: column;
+}
+main {
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+@media (min-width: 80rem) {
+  article {
+    margin: 0.5rem;
+    width: calc(50% - 2rem);
+    box-shadow: 1px 1px 1px lightgray;
+  }
+}
+
+article, main > p {
+  padding: 0.5em;
+}
+article {
+  transition: background-color 500ms ease;
+}
+article:target {
+  background-color: aliceBlue;
+}
+
+ul.names, ul.names li {
+  list-style: none;
+}
+ul.names {
+  display: inline;
+  padding: 0;
+  margin: 0;
+}
+ul.names li {
+  display: inline-block;
+  border: 1px solid darkGray;
+  border-radius: 0.2em;
+  padding: 0.2em;
+  margin: 0.2ex 0;
+  cursor: pointer;
+}
+li.project, li.technology {
+  list-style: none;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  display: inline;
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1rem;
+  font-weight: normal;
+  display: inline;
+}
+h3, .type {
+  color: darkSlateGray;
+  font-variant: small-caps;
+  text-transform: lowercase;
+}
+.type::after {
+  content: '';
+  display: block;
+}
+.project a.url {
+  text-decoration: initial;
+  color: initial;
+}
+
+p {
+  margin: 0.5ex 0;
+  padding: 0;
+}
+
+ul.contributions, ul.contributions li {
+  list-style: none;
+  padding: 0;
+}
+ul.contributions {
+  margin: 1ex 0;
+}
+.contributions li {
+  margin: 0.5ex 0;
+}
+.contributions li::before {
+  content: '*';
+  margin: 0.5em;
+  color: darkGray;
+}
+
+nav {
+  box-shadow: 0 5px 5px -3px lightGray;
+  z-index: 100;
+}
+.pages.names {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+nav input[type="radio"] {
+  display: none;
+}
+nav .label {
+  display: inline-block;
+  padding: 0.5ex 2em;
+  cursor: pointer;
+}
+nav :checked + .label {
+  color: darkCyan;
+  box-shadow: 0 5px 5px -4px darkCyan;
+}
+

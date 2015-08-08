@@ -1,0 +1,34 @@
+<!-- ko foreach: $component -->
+<article class='project' data-bind='attr: {id: id}'>
+  <h2>
+    <a class='name url' title='Open the project site' target='project-site' 
+       data-bind='text: name, attr: {href: url}'></a>
+  </h2>
+
+  <span class='type' data-bind='text: type'></span>
+  <p class='description' data-bind='text: description'></p>
+
+  <section>
+    <h3>My contributions</h3>
+    <ul class='contributions' data-bind='foreach: contributions'>
+      <li class='contribution' data-bind='text: $data'></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Skills involved</h3>
+    <ul class='skills names' data-bind='foreach: skills, click: $root.selectSkill'>
+      <li class='skill name' data-bind='text: name'></li>
+    </ul>
+  </section>
+
+  <section>
+    <h3>Technologies used</h3>
+    <ul class='technologies names' data-bind='foreach: technologies,
+                                              click: $root.selectTechnology'>
+      <li class='technology name' data-bind='text: name'></li>
+    </ul>
+  </section>
+</article>
+<!-- /ko -->
+
