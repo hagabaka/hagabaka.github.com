@@ -1,4 +1,5 @@
-define(['json!projects.json', 'keyword', 'knockout'], function(projects, Keyword, ko) {
+define(['json!model/projects.json', 'viewModel/keyword', 'knockout'],
+function(projects, Keyword, ko) {
   function Project(data) {
     var self = this;
     for(var field in data) {

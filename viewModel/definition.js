@@ -1,4 +1,4 @@
-define(['json!definitions.json'], function(definitions) {
+define(['json!model/definitions.json'], function(definitions) {
   var missingDefinitions = {};
 
   return {

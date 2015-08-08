@@ -1,4 +1,4 @@
-define(['definition', 'knockout'], function(Definition, ko) {
+define(['viewModel/definition', 'knockout'], function(Definition, ko) {
   function Keyword(name) {
     this.name = name;
     this.highlighted = ko.observable(false);

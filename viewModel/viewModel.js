@@ -1,4 +1,5 @@
-define(['project', 'keyword', 'definition', 'pages', 'knockout'],
+define(['viewModel/project', 'viewModel/keyword', 'viewModel/definition', 'viewModel/pages',
+        'knockout'],
 function(Project, Keyword, Definition, pages, ko) {
   return function ViewModel() {
     var self = this;

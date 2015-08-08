@@ -9,7 +9,7 @@ requirejs.config({
   },
 });
 
-requirejs(['components', 'viewModel'], function(Components, ViewModel) {
+requirejs(['viewModel/components', 'viewModel/viewModel'], function(Components, ViewModel) {
   var viewModel = new ViewModel();
   var components = new Components(viewModel);
   components.register();
