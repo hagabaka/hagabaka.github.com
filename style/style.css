@@ -18,9 +18,7 @@ main {
 }
 @media (min-width: 80rem) {
   article {
-    margin: 0.5rem;
     width: calc(50% - 2rem);
-    box-shadow: 1px 1px 1px lightgray;
   }
 }
 
@@ -29,6 +27,8 @@ article, main > p {
 }
 article {
   transition: background-color 500ms ease;
+  margin: 0.5rem;
+  box-shadow: 1px 1px 1px lightgray;
 }
 article:target {
   background-color: aliceBlue;
@@ -64,12 +64,12 @@ h2 {
 h3 {
   font-size: 1rem;
   font-weight: normal;
-  display: inline;
 }
 h3, .type {
   color: darkSlateGray;
   font-variant: small-caps;
   text-transform: lowercase;
+  display: inline-block;
 }
 .type::after {
   content: '';
