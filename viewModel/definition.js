@@ -1,4 +1,6 @@
-define(['json!model/definitions.json'], function(definitions) {
+define(['text!model/definitions.yaml', 'yaml'], function(file, yaml) {
+  var definitions = yaml.safeLoad(file);
+
   var missingDefinitions = {};
 
   return {

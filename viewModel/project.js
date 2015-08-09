@@ -1,5 +1,7 @@
-define(['json!model/projects.json', 'viewModel/keyword', 'knockout'],
-function(projects, Keyword, ko) {
+define(['text!model/projects.yaml', 'viewModel/keyword', 'yaml', 'knockout'],
+function(file, Keyword, yaml, ko) {
+  var projects = yaml.safeLoad(file);
+
   function Project(data) {
     var self = this;
     for(var field in data) {
