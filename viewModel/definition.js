@@ -1,12 +1,12 @@
-define(['text!model/definitions.yaml', 'yaml'], function(file, yaml) {
+define(['text!model/definitions.yaml', 'yaml', 'markdown'], function(file, yaml, markdown) {
   var definitions = yaml.safeLoad(file);
 
   var missingDefinitions = {};
 
   return {
     ofKeyword: function(name) {
-      if(name in definitions) {
-        return definitions[name];
+      if(name in definitions && definitions[name]) {
+        return markdown.toHTML(definitions[name]);
       } else {
         missingDefinitions[name] = '';
         return '';

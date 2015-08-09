@@ -1,5 +1,5 @@
-define(['text!model/projects.yaml', 'viewModel/keyword', 'yaml', 'knockout'],
-function(file, Keyword, yaml, ko) {
+define(['text!model/projects.yaml', 'viewModel/keyword', 'yaml', 'markdown', 'knockout'],
+function(file, Keyword, yaml, markdown, ko) {
   var projects = yaml.safeLoad(file);
 
   function Project(data) {
@@ -7,6 +7,7 @@ function(file, Keyword, yaml, ko) {
     for(var field in data) {
       this[field] = data[field];
     }
+    this.description = markdown.toHTML(data.description);
     this.technologies = data.technologies.map(function(name) {
       return self.associatedKeyword(name, 'technology');
     });

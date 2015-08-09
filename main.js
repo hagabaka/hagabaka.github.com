@@ -9,6 +9,11 @@ requirejs.config({
     yaml: 'lib/js-yaml',
     markdown: 'lib/markdown'
   },
+  shim: {
+    markdown: {
+      exports: 'markdown'
+    }
+  }
 });
 
 requirejs(['viewModel/components', 'viewModel/viewModel'], function(Components, ViewModel) {
