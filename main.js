@@ -3,9 +3,11 @@ requirejs.config({
   paths: {
     jquery: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery',
     knockout: 'https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug',
-    text: 'requirejs/text',
-    json: 'requirejs/json',
-    domReady: 'requirejs/domReady',
+    text: 'lib/text',
+    json: 'lib/json',
+    domReady: 'lib/domReady',
+    yaml: 'lib/js-yaml',
+    markdown: 'lib/markdown'
   },
 });
 
