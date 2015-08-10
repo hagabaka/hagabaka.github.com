@@ -15,25 +15,42 @@ function(Project, Keyword, Definition, pages, ko) {
     });
     this.pages = this.pageSwitcher = pages;
 
-    function selectItem(event, className, switchToPage) {
+    this.popup = {
+      component: ko.observable(null),
+      item: ko.observable(null),
+      type: ko.observable(null),
+      parentPage: ko.observable(null),
+      close: function() {
+        self.popup.component(null);
+      },
+      switchPage: function() {
+        self.pages.current(self.popup.parentPage());
+      }
+    };
+
+    function selectItem(event, component, type, page) {
       var target = event.target;
-      if(target.classList.contains(className)) {
+      if(target.classList.contains('name')) {
         var data = ko.dataFor(event.target);
-        self.pages.current(switchToPage);
-        setTimeout(function() {
-          location.hash = data.id;
-        }, 0);
+        if(self.pages.current() !== page) {
+          self.popup.close();
+          self.popup.item(data);
+          self.popup.type(type);
+          self.popup.parentPage(page);
+          self.popup.component(component);
+        }
+        location.hash = data.id;
       }
       return false;
     }
     this.selectTechnology = function(_, event) {
-      selectItem(event, 'name', 'technologies');
+      selectItem(event, 'keyword', 'technology', 'technologies');
     };
     this.selectSkill = function(_, event) {
-      selectItem(event, 'name', 'skills');
+      selectItem(event, 'keyword', 'skill', 'skills');
     };
     this.selectProject = function(_, event) {
-      selectItem(event, 'project', 'projects');
+      selectItem(event, 'project', 'project', 'projects');
     };
     this.activate = function() {
       ko.applyBindings(this);

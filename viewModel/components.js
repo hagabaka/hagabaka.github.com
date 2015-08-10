@@ -1,5 +1,6 @@
 define(['viewModel/pages', 'knockout'], function(pages, ko) {
-  var componentNames = ['project', 'keyword', 'pageSwitcher'].concat(pages.map(function(page) {
+  var componentNames = ['project', 'keyword', 'popup', 'pageSwitcher'].concat(pages.map(
+  function(page) {
     return page.name;
   }));
 

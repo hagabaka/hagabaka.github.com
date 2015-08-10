@@ -16,21 +16,59 @@ main {
   flex-direction: row;
   flex-wrap: wrap;
 }
+#popup {
+  position: fixed;
+  z-index: 200;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: calc(100% - 10em);
+  max-height: calc(100% - 10ex);
+  border: 1px solid darkCyan;
+  background-color: white;
+  padding: 2rem;
+}
+#popup #close {
+  visibility: hidden;
+}
+#popup #close::after {
+  visibility: visible;
+  content: '×';
+  font-size: 2rem;
+  line-height: 2rem;
+  color: white;
+  background-color: darkCyan;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 1rem;
+  border: 1px solid darkCyan;
+  position: absolute;
+  left: -1rem;
+  top: -1rem;
+  cursor: pointer;
+}
+#popup, #popup #close::after {
+  box-shadow: 0 0 3px 2px darkGray;
+}
+#popup h3 {
+  cursor: pointer;
+}
+
 @media (min-width: 80rem) {
-  article {
+  main article {
     width: calc(50% - 2rem);
   }
 }
 
-article, main > p {
+main article, main > p {
   padding: 0.5em;
 }
-article {
+main article {
   transition: background-color 500ms ease;
   margin: 0.5rem;
   box-shadow: 1px 1px 1px lightgray;
 }
-article:target {
+main article:target {
   background-color: aliceBlue;
 }
 
