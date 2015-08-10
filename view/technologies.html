@@ -1,13 +1,4 @@
 <!-- ko foreach: $component -->
-<article class='technology' data-bind='attr: {id: id}'>
-  <h2 class='technlogy name' data-bind='text: name'></h2>
-  <div class='definition' data-bind='html: definition'></div>
-  <section>
-    <h3>Used in projects</h3>
-    <ul class='projects names' data-bind='foreach: projects, click: $root.selectProject'>
-      <li class='project name' data-bind='text: name'></li>
-    </ul>
-  </section>
-</article>
+  <!-- ko component: {name: 'keyword', params: $data} --><!-- /ko -->
 <!-- /ko -->
 

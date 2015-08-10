@@ -1,5 +1,5 @@
 define(['viewModel/pages', 'knockout'], function(pages, ko) {
-  var componentNames = ['pageSwitcher'].concat(pages.map(function(page) {
+  var componentNames = ['project', 'keyword', 'pageSwitcher'].concat(pages.map(function(page) {
     return page.name;
   }));
 
@@ -13,7 +13,9 @@ define(['viewModel/pages', 'knockout'], function(pages, ko) {
     componentNames.forEach(function(name) {
       ko.components.register(name, {
         template: {require: 'text!./view/' + name + '.html'},
-        viewModel: function() {return self.viewModel[name];},
+        viewModel: function(params) {
+          return params || self.viewModel[name];
+        },
         synchronous: true
       });
     });
