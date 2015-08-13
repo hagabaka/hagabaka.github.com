@@ -1,9 +1,13 @@
 -
   name: Dofus Idol Calculator
-  description: A web application which displays information about items in the MMORPG Dofus
-  contributions:
-    - acquired necessary information from the game official website, fansites, and players
-    - designed and implemented the application
+  description: A web application which displays information about items from an MMORPG
+  story: |
+    "Idol" is a new feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external}',
+    involving hundreds of items which interacted with each other. I built this application
+    to help players understand the system, and refined its features based on player feedback.
+
+    To speed up the development process, I created scripts which crawled the game website to
+    gather public information used in the application.
   type: web application
   skills:
     - responsive design
@@ -11,6 +15,7 @@
     - version control
     - front end development
   technologies:
+    - web worker
     - JavaScript
     - Knockout.JS
     - RequireJS
@@ -19,12 +24,16 @@
   url: http://hagabaka.github.com/dofus-idols
 -
   name: SDDM Configuration Editor
-  description: A configuration tool which helps Linux users set up a piece of system software called Simple Desktop Display Manager.
-  contributions:
-    - created scripts to convert example configuration files into usable data
-    - designed and implemented the application
-    - contacted Linux desktop environment developers regarding possibility of including my software
-    - responded to feature requests and bug reports from users
+  description: A system configuration tool
+  story: |
+    [Simple Desktop Display Manager (SDDM)](http://github.com/sddm/sddm){:target:external} is a
+    system software used by some Linux users. To configure it, a user had to manually edit text
+    configuration files. I created this application which presents the settings in a user-
+    friendly graphical interface.
+
+    I announced this application to Linux desktop environment developers, some of whom
+    have adopted it into their systems. I also responded to bug reports and feature requests
+    from users.
   type: desktop application
   skills:
     - desktop application development
@@ -38,11 +47,17 @@
   url: https://github.com/hagabaka/sddm-config-editor
 -
   name: Dofus Dimensional Portals
-  description: A web application which periodically scans a web forum for the MMORPG Dofus, extracts textual information players posted, and displays it.
-  contributions:
-    - implemented backend to extract data from forum posts
-    - implemented frontend which presents updated data
-    - improved text scanning procedure to handle to different ways people write on forums
+  description: A web application which displays periodically updated information
+  story: |
+    The MMORPG [Dofus](http://www.dofus.com/){:target=external}' features "portals" which
+    change location in the game and must be found by players. Some players started sharing
+    these locations on a web forum. I created this application which periodically scans
+    the forum, and displays the latest found locations.
+
+    To improve utility of the application, I fine-tuned the text processing code so that it
+    understood people's postings which were in a variety of formats and styles. I implemented
+    a push-notification mechanism so that the page updates without requiring the user to reload
+    manually. Currently about 60 unique visitors use this application per day.
   type: web application
   skills:
     - responsive design
@@ -51,6 +66,7 @@
     - back end development
     - version control
   technologies:
+    - server sent events
     - JavaScript
     - Knockout.JS
     - Node.JS
@@ -59,12 +75,19 @@
   url: http://dofusportal.net
 -
   name: Dofus Treasure Hunt Clues
-  description: A web application which periodically scans a web forum for the MMORPG Dofus, displays images and text players posted on it, and allows users to search and filter the entries.
+  description: A web application displays images gathered from a web forum
   type: web appliction
-  contributions:
-    - implemented backend to extract data from forum posts
-    - implemented frontend which presents updated data with search and filter capabilities
-    - set up content delivery system to improve stability and performance
+  story: |
+    Treasure hunt is a feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external}'
+    where players follow text clues to find items at specific in-game locations. Some players
+    shared the clues with screenshots of the items to help those who didn't understand the
+    clues, including some foreign language players, on a web forum. The forum thread eventually
+    grew too long to navigate, so I created this application to display the clues and
+    screenshots on a single page, with the capabilities to search, sort, and filter them.
+
+    I set up a content delivery network and implemented other feature to make sure that this
+    image-heavy web page stays fast and stable. Currently about 200 unique visitors per day use
+    this application.
   skills:
     - responsive design
     - web scraping
@@ -83,13 +106,19 @@
   url: http://dofustreasure.net
 -
   name: Frogatto and Friends
-  description: A videogame for desktop computers and iOS
+  description: Contributions to a videogame
   type: desktop application
   collaboration: true
-  contributions:
-    - designed a system to allow the game to display dialog translated into Chinese, Japanese and Korean
-    - designed the in-game language selection menu
-    - created Chinese and Japanese translations in collaboration with other translators
+  story: |
+    [Frogatto and Friends](http://www.frogatto.com/) is a PC and iOS video game developed by
+    Lost Pixels. It was capable of displaying dialog and user interface text in different
+    languages, but since the game uses hand-drawn letters, it was not feasible to include
+    translations in Chinese or Japanese, languages that have tens of thousands of characters.
+    I developed scripts to find the set of characters used in the game translation and
+    automatically build a sprite sheet compatible with the game, solving this problem.
+
+    In addition, I collaborated with Chinese and Japanese translators to improve the game's
+    translations, and made improvements to the game's Linux building process.
   skills:
     - image processing
     - text processing

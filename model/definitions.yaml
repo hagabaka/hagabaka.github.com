@@ -11,14 +11,17 @@ Node.JS: My favorite web back-end software
 QtQuick: A framework used in desktop applications
 RequireJS: A tool that makes it easy to divide web application code into self-contained modules
 Ruby: A programming language that I often use for scripting
-desktop application development:
-image processing:
+back end development: I have experience in developing the back end of a web application
+desktop application development: I have experience in creating graphical and command-line desktop applications
+front end development: I am experienced in creating the front end of a web application
+image processing: I have experience in writing programs to automatically manipulate and combine images
+internalization: I am very experienced in creating and working with systems that make a program usable in multiple languages
 jQuery: A framework used in web front-end development
-responsive design: Designing web pages with varying layout based on screen size and orientation, so that they are easily viewable and usable on all devices
-text processing:
+responsive design: I have experience in design web pages so that they are easily viewable and usable on devices with varying sizes and orientations
+server sent events:
+text processing: I have experience in writing programs which analyze and extract information from text, including well-formatted text and text written by people
 version control:
-back end development:
-front end development:
-web performance optimization:
-web scraping: Automatically extracting information from web pages
+web performance optimization: I have experience in improving a web site's performance, by adjusting how and what content is loaded.
+web scraping: I am very experienced in creating scripts which automatically extract information from web pages
+web worker: Allows a web page to perform computations in the background, without blocking its user interface
 
