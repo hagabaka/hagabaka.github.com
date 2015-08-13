@@ -28,6 +28,10 @@ main {
   background-color: white;
   padding: 2rem;
 }
+main.popup-visible {
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
 #popup.project {
   width: calc(100% - 2em);
 }
