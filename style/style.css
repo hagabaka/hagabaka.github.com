@@ -5,6 +5,7 @@ html, body {
   width: 100vw;
   margin: 0;
   padding: 0;
+  background-color: beige;
 }
 body {
   display: flex;
@@ -25,7 +26,7 @@ main {
   max-width: calc(100% - 10em);
   max-height: calc(100% - 10ex);
   border: 1px solid darkCyan;
-  background-color: white;
+  background-color: ivory;
   padding: 2rem;
 }
 main.popup-visible {
@@ -72,16 +73,12 @@ main.popup-visible {
   }
 }
 
-main article, main > p {
+main article {
   padding: 0.5em;
 }
 main article {
-  transition: background-color 500ms ease;
   margin: 0.5rem;
   box-shadow: 1px 1px 1px lightgray;
-}
-main article:target {
-  background-color: aliceBlue;
 }
 
 ul.names, ul.names li {
@@ -141,7 +138,7 @@ main .skill .type, main .technology .type {
 }
 .screenshot {
   width: 15rem;
-  margin: 0 1rem 1rem 0;
+  margin: 0 1rem 0 0;
   float: left;
   border: 1px solid darkCyan;
 }
@@ -152,7 +149,7 @@ main .skill .type, main .technology .type {
 }
 
 p {
-  margin: 0.5ex 0;
+  margin: 1.5ex 0;
   padding: 0;
 }
 
@@ -178,6 +175,7 @@ ul.contributions {
 nav {
   box-shadow: 0 5px 5px -3px lightGray;
   z-index: 100;
+  background-color: ivory;
 }
 .pages.names {
   display: flex;
@@ -196,12 +194,19 @@ nav :checked + .label {
   box-shadow: 0 5px 5px -4px darkCyan;
 }
 
-.clickable, main .screenshot {
+a, a:visited {
+  text-decoration: none;
+  color: darkSlateGray;
+}
+a, .clickable, main .screenshot {
   cursor: pointer;
   transition: all 400ms ease;
 }
-.clickable:hover, main .screenshot:hover {
+a:hover, .clickable:hover, main .screenshot:hover {
+  color: darkCyan;
+  background-color: ghostWhite;
+}
+li.clickable:hover, main .screenshot:hover {
   box-shadow: 0 0 1px darkCyan;
-  background-color: mintCream;
 }
 
