@@ -30,15 +30,13 @@ function(Project, Keyword, Definition, pages, ko) {
 
     function selectItem(event, component, type, page) {
       var target = event.target;
-      if(target.classList.contains('name')) {
+      if(target.classList.contains('name') || target.classList.contains('screenshot')) {
         var data = ko.dataFor(event.target);
-        if(self.pages.current() !== page) {
-          self.popup.close();
-          self.popup.item(data);
-          self.popup.type(type);
-          self.popup.parentPage(page);
-          self.popup.component(component);
-        }
+        self.popup.close();
+        self.popup.item(data);
+        self.popup.type(type);
+        self.popup.parentPage(page);
+        self.popup.component(component);
         location.hash = data.id;
       }
       return false;

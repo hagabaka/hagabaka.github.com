@@ -28,6 +28,13 @@ main {
   background-color: white;
   padding: 2rem;
 }
+#popup.project {
+  width: calc(100% - 2em);
+}
+#popup .screenshot {
+  width: auto;
+  max-height: calc(100vh - 14ex);
+}
 #popup #close {
   visibility: hidden;
 }
@@ -50,13 +57,13 @@ main {
 #popup, #popup #close::after {
   box-shadow: 0 0 3px 2px darkGray;
 }
-#popup h3 {
-  cursor: pointer;
-}
 
 @media (min-width: 80rem) {
   main article {
     width: calc(50% - 2rem);
+  }
+  main article.project {
+    width: calc(100% - 2rem);
   }
 }
 
@@ -86,7 +93,6 @@ ul.names li {
   border-radius: 0.2em;
   padding: 0.2em;
   margin: 0.2ex 0;
-  cursor: pointer;
 }
 li.project, li.technology {
   list-style: none;
@@ -117,6 +123,9 @@ h3, .type {
   text-transform: lowercase;
   display: inline-block;
 }
+main .skill .type, main .technology .type {
+  display: none;
+}
 .type::after {
   content: '';
   display: block;
@@ -124,6 +133,17 @@ h3, .type {
 .project a.url {
   text-decoration: initial;
   color: initial;
+}
+.screenshot {
+  width: 15rem;
+  margin: 0 1rem 1rem 0;
+  float: left;
+  border: 1px solid darkCyan;
+}
+.screenshot::after {
+  content: '';
+  display: block;
+  box-shadow: 0 0 2px -2px black;
 }
 
 p {
@@ -165,10 +185,18 @@ nav input[type="radio"] {
 nav .label {
   display: inline-block;
   padding: 0.5ex 2em;
-  cursor: pointer;
 }
 nav :checked + .label {
   color: darkCyan;
   box-shadow: 0 5px 5px -4px darkCyan;
+}
+
+.clickable, main .screenshot {
+  cursor: pointer;
+  transition: all 400ms ease;
+}
+.clickable:hover, main .screenshot:hover {
+  box-shadow: 0 0 1px darkCyan;
+  background-color: mintCream;
 }
 

@@ -5,6 +5,10 @@
   </h2>
 
   <span class='type' data-bind='text: type'></span>
+
+  <img class='screenshot' alt='screenshot' data-bind='attr: {src: screenshot},
+                                                      click: $root.selectProject'>
+
   <div class='description' data-bind='html: description'></div>
 
   <section>
@@ -17,7 +21,7 @@
   <section>
     <h3>Skills involved</h3>
     <ul class='skills names' data-bind='foreach: skills, click: $root.selectSkill'>
-      <li class='skill name' data-bind='text: name'></li>
+      <li class='skill name clickable' data-bind='text: name'></li>
     </ul>
   </section>
 
@@ -25,7 +29,7 @@
     <h3>Technologies used</h3>
     <ul class='technologies names' data-bind='foreach: technologies,
                                               click: $root.selectTechnology'>
-      <li class='technology name' data-bind='text: name'></li>
+      <li class='technology name clickable' data-bind='text: name'></li>
     </ul>
   </section>
 </article>

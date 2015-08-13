@@ -1,6 +1,5 @@
 <!-- ko if: component -->
-  <div id='popup'>
-    <h3 data-bind='text: type, click: switchPage'></h3>
+  <div id='popup' data-bind='attr: {class: type}'>
     <!-- ko component: {name: component, params: item} --><!-- /ko -->
     <button id='close' data-bind='click: close'>Close</button>
   </div>

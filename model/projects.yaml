@@ -1,5 +1,5 @@
 -
-  name: Dofus Idol Score Calculator
+  name: Dofus Idol Calculator
   description: A web application which displays information about items in the MMORPG Dofus
   contributions:
     - acquired necessary information from the game official website, fansites, and players
