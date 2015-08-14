@@ -1,6 +1,7 @@
 -
   name: Dofus Idol Calculator
-  description: A web application which displays information about items from an MMORPG
+  description:
+    A web application which displays and calculates information about items from a game
   story: |
     "Idol" is a new feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external}',
     involving hundreds of items which interacted with each other. I built this application
@@ -16,6 +17,8 @@
     - front end development
   technologies:
     - web worker
+    - HTML
+    - CSS
     - JavaScript
     - Knockout.JS
     - RequireJS
@@ -67,6 +70,8 @@
     - version control
   technologies:
     - server sent events
+    - HTML
+    - CSS
     - JavaScript
     - Knockout.JS
     - Node.JS
@@ -75,7 +80,7 @@
   url: http://dofusportal.net
 -
   name: Dofus Treasure Hunt Clues
-  description: A web application displays images gathered from a web forum
+  description: A web application which displays images gathered from a web forum
   type: web appliction
   story: |
     Treasure hunt is a feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external}'
@@ -97,6 +102,8 @@
     - version control
   technologies:
     - CloudFlare
+    - HTML
+    - CSS
     - JavaScript
     - Knockout.JS
     - jQuery
@@ -122,7 +129,7 @@
   skills:
     - image processing
     - text processing
-    - internalization
+    - internationalization
     - Chinese
     - Japanese
     - desktop application development
@@ -132,4 +139,21 @@
     - C++
     - Git
   url: http://www.frogatto.com
+-
+  name: AOP International Exchange Services
+  type: website
+  description: Website for a business
+  story: |
+    AOP International Exchange Services is an international education consulting company. I
+    collaborated in the development of its business website. Since its clients include Chinese
+    and American organizations, I developed a system to help maintain a bilingual website.
+
+    I also set up web hosting and Google Apps services for the business.
+  skills:
+    - internationalization
+    - Chinese
+  technologies:
+    - HTML
+    - CSS
+  url: http://www.aop2u.com
 
