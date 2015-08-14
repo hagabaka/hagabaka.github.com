@@ -196,7 +196,7 @@ a, a:visited {
   text-decoration: none;
   color: darkSlateGray;
 }
-a, .clickable, main .project {
+a, .clickable, main article.project {
   cursor: pointer;
   transition-property: color, border-color; background-color, box-shadow;
   transition-duration: 400ms;
@@ -207,12 +207,12 @@ a:hover, .clickable:hover {
   color: darkSlateGray;
   border-color: darkSlateGray;
 }
-main .project:hover {
+main article.project:hover {
   background-color: aliceBlue;
 }
 a:hover, .clickable:hover {
 }
-li.clickable:hover, main .project:hover {
+li.clickable:hover, main article.project:hover {
   box-shadow: 0 0 1px darkCyan;
 }
 
