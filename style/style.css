@@ -196,15 +196,23 @@ a, a:visited {
   text-decoration: none;
   color: darkSlateGray;
 }
-a, .clickable, main .screenshot {
+a, .clickable, main .project {
   cursor: pointer;
-  transition: all 400ms ease;
+  transition-property: color, border-color; background-color, box-shadow;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
 }
-a:hover, .clickable:hover, main .screenshot:hover {
-  color: darkCyan;
-  background-color: ghostWhite;
+a:hover, .clickable:hover {
+  background-color: lightSkyBlue;
+  color: darkSlateGray;
+  border-color: darkSlateGray;
 }
-li.clickable:hover, main .screenshot:hover {
+main .project:hover {
+  background-color: aliceBlue;
+}
+a:hover, .clickable:hover {
+}
+li.clickable:hover, main .project:hover {
   box-shadow: 0 0 1px darkCyan;
 }
 

@@ -30,13 +30,13 @@ function(Project, Keyword, Definition, pages, ko) {
 
     function selectItem(event, component, type, page) {
       var target = event.target;
-      if(target.classList.contains('name') || target.classList.contains('screenshot')) {
-        var data = ko.dataFor(event.target);
+      var data = ko.dataFor(event.target);
+      if(data.typeName === 'project' || data.typeName === 'keyword') {
         self.popup.close();
         self.popup.item(data);
         self.popup.type(type);
         self.popup.parentPage(page);
-        self.popup.component(component);
+        self.popup.component(data.typeName);
         location.hash = data.id;
       }
       return false;
@@ -49,6 +49,7 @@ function(Project, Keyword, Definition, pages, ko) {
     };
     this.selectProject = function(_, event) {
       selectItem(event, 'project', 'project', 'projects');
+      return true;
     };
     this.activate = function() {
       ko.applyBindings(this);

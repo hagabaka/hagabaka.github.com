@@ -3,6 +3,7 @@ function(file, Keyword, yaml, markdown, ko) {
   var projects = yaml.safeLoad(file);
 
   function Project(data) {
+    this.isProject = true;
     var self = this;
     for(var field in data) {
       this[field] = data[field];
@@ -25,6 +26,7 @@ function(file, Keyword, yaml, markdown, ko) {
     keyword.projects.push(this);
     return keyword;
   };
+  Project.prototype.typeName = 'project';
 
   Project.list = projects.map(function(data) {
     return new Project(data);

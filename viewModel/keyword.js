@@ -1,5 +1,6 @@
 define(['viewModel/definition', 'knockout'], function(Definition, ko) {
   function Keyword(name) {
+    this.isKeyword = true;
     this.name = name;
     this.highlighted = ko.observable(false);
     this.definition = Definition.ofKeyword(this.name);
@@ -19,6 +20,7 @@ define(['viewModel/definition', 'knockout'], function(Definition, ko) {
       return keywordByName[name];
     });
   };
+  Keyword.prototype.typeName = 'keyword';
 
   return Keyword;
 });
