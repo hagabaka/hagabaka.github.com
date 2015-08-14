@@ -68,17 +68,15 @@ main.popup-visible {
   main article {
     width: calc(50% - 2rem);
   }
-  main article.project {
-    width: calc(100% - 2rem);
-  }
 }
 
 main article {
   padding: 0.5em;
-}
-main article {
   margin: 0.5rem;
   box-shadow: 1px 1px 1px lightgray;
+}
+main article .story, main article .technologies {
+  display: none;
 }
 
 ul.names, ul.names li {
@@ -137,7 +135,7 @@ main .skill .type, main .technology .type {
   color: initial;
 }
 .screenshot {
-  width: 15rem;
+  width: 10rem;
   margin: 0 1rem 0 0;
   float: left;
   border: 1px solid darkCyan;

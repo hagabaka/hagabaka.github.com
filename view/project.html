@@ -12,14 +12,14 @@
   <p class='description' data-bind='text: description'></p>
   <div class='story' data-bind='html: story'></div>
 
-  <section>
+  <section class='skills'>
     <h3>Skills involved</h3>
     <ul class='skills names' data-bind='foreach: skills, click: $root.selectSkill'>
       <li class='skill name clickable' data-bind='text: name'></li>
     </ul>
   </section>
 
-  <section>
+  <section class='technologies'>
     <h3>Technologies used</h3>
     <ul class='technologies names' data-bind='foreach: technologies,
                                               click: $root.selectTechnology'>
