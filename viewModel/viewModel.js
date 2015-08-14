@@ -37,7 +37,6 @@ function(Project, Keyword, Definition, pages, ko) {
         self.popup.type(type);
         self.popup.parentPage(page);
         self.popup.component(data.typeName);
-        location.hash = data.id;
       }
       return false;
     }
