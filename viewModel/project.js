@@ -9,7 +9,6 @@ function(file, Keyword, yaml, markdown, ko) {
       this[field] = data[field];
     }
     data.story = data.story || '';
-    console.log(JSON.stringify(data.story));
     this.story = markdown.toHTML(data.story, 'Maruku');
     this.technologies = data.technologies.map(function(name) {
       return self.associatedKeyword(name, 'technology');
