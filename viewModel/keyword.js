@@ -1,4 +1,5 @@
-define(['viewModel/definition', 'knockout'], function(Definition, ko) {
+define(['viewModel/definition', 'viewModel/order', 'knockout'],
+function(Definition, order, ko) {
   function Keyword(name) {
     this.isKeyword = true;
     this.name = name;
@@ -6,6 +7,7 @@ define(['viewModel/definition', 'knockout'], function(Definition, ko) {
     this.definition = Definition.ofKeyword(this.name);
     this.id = name.replace(/\s/g, '-');
     this.projects = [];
+    this.order = order.ofKeyword(this.name);
   }
 
   var keywordByName = {};
@@ -18,6 +20,8 @@ define(['viewModel/definition', 'knockout'], function(Definition, ko) {
   Keyword.list = function() {
     return Object.keys(keywordByName).map(function(name) {
       return keywordByName[name];
+    }).sort(function(keyword1, keyword2) {
+      return keyword1.order - keyword2.order;
     });
   };
   Keyword.prototype.typeName = 'keyword';
