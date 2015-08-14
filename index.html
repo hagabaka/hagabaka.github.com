@@ -8,8 +8,9 @@
 
   <body>
     <nav data-bind='component: "pageSwitcher"'></nav>
-    <main data-bind='component: pages.current, css: {"popup-visible": popup.component}'></main>
-    <!-- ko component: "popup" --><!-- /ko -->
+    <main data-bind='component: pages.current, css: {"popup-visible": popupVisible}'></main>
+    <!-- ko component: {name: "popup", params: selectedProject} --><!-- /ko -->
+    <!-- ko component: {name: "popup", params: selectedKeyword} --><!-- /ko -->
   </body>
 </html>
 

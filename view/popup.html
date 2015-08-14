@@ -1,5 +1,6 @@
-<!-- ko if: component -->
-  <div id='popup' data-bind='attr: {class: type}'>
+<!-- ko if: $component.item -->
+  <div id='popup' data-bind='attr: {class: type}, style: {zIndex: zIndex},
+                             css: {"top-most": isTopMost}'>
     <!-- ko component: {name: component, params: item} --><!-- /ko -->
     <button id='close' data-bind='click: close'>Close</button>
   </div>

@@ -17,9 +17,11 @@ function(Definition, order, ko) {
     }
     return keywordByName[name];
   };
-  Keyword.list = function() {
+  Keyword.list = function(type) {
     return Object.keys(keywordByName).map(function(name) {
       return keywordByName[name];
+    }).filter(function(keyword) {
+      return !type || type === keyword.type;
     }).sort(function(keyword1, keyword2) {
       return keyword1.order - keyword2.order;
     });

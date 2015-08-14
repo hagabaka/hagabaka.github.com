@@ -29,7 +29,7 @@ main {
   background-color: ivory;
   padding: 2rem;
 }
-main.popup-visible {
+main.popup-visible, #popup:not(.top-most) {
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }

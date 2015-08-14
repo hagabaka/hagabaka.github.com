@@ -12,13 +12,13 @@ define(['viewModel/pages', 'knockout'], function(pages, ko) {
     var self = this;
 
     componentNames.forEach(function(name) {
-      ko.components.register(name, {
+      var options = {
         template: {require: 'text!./view/' + name + '.html'},
-        viewModel: function(params) {
-          return params || self.viewModel[name];
-        },
-        synchronous: true
-      });
+      };
+      if(['project', 'keyword'].indexOf(name) < 0) {
+        options.viewModel = {require: 'viewModel/' + name};
+      }
+      ko.components.register(name, options);
     });
   };
 
