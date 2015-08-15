@@ -90,7 +90,7 @@
     grew too long to navigate, so I created this application to display the clues and
     screenshots on a single page, with the capabilities to search, sort, and filter them.
 
-    I set up a content delivery network and implemented other feature to make sure that this
+    I set up a content delivery network and implemented other features to make sure that this
     image-heavy web page stays fast and stable. Currently about 200 unique visitors per day use
     this application.
   skills:
