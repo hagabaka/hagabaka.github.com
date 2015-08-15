@@ -17,7 +17,7 @@ function(file, Keyword, yaml, markdown, ko) {
       return self.associatedKeyword(name, 'skill');
     });
     this.id = this.name.replace(/\s/g, '-');
-    this.screenshot = 'screenshot/' + this.id + '.png';
+    this.screenshot = 'image/' + this.id + '.png';
   }
   Project.prototype.associatedKeyword = function(name, type) {
     var keyword = Keyword.byName(name);

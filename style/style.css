@@ -182,12 +182,18 @@ nav {
   flex-direction: row;
   justify-content: center;
 }
+.pages > label {
+  width: 10em;
+  flex: 0 1 auto;
+}
 nav input[type="radio"] {
   display: none;
 }
 nav .label {
   display: inline-block;
-  padding: 0.5ex 2em;
+  width: 100%;
+  text-align: center;
+  padding: 0.5ex 0;
 }
 nav :checked + .label {
   color: darkCyan;
@@ -217,7 +223,11 @@ a:hover, .clickable:hover {
 li.clickable:hover, main article.project:hover {
   box-shadow: 0 0 1px darkCyan;
 }
-
+.photo {
+  float: left;
+  margin-right: 1em;
+  border-radius: 1em;
+}
 @media (min-width: 80rem) {
   main article.project {
     width: calc(50% - 2rem);

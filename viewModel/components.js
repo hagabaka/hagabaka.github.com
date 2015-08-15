@@ -15,7 +15,7 @@ define(['viewModel/pages', 'knockout'], function(pages, ko) {
       var options = {
         template: {require: 'text!./view/' + name + '.html'},
       };
-      if(['project', 'keyword'].indexOf(name) < 0) {
+      if(['about', 'project', 'keyword'].indexOf(name) < 0) {
         options.viewModel = {require: 'viewModel/' + name};
       }
       ko.components.register(name, options);

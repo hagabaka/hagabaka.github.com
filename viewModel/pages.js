@@ -1,6 +1,10 @@
 define(['knockout'], function(ko) {
   var pages = [
     {
+      name: 'about',
+      label: 'Me',
+    },
+    {
       name: 'projects',
       label: 'Projects'
     },
@@ -13,7 +17,7 @@ define(['knockout'], function(ko) {
       label: 'Technologies',
     },
   ];
-  pages.current = ko.observable(pages[0].name);
+  pages.current = ko.observable('projects');
 
   return pages;
 });
