@@ -5,7 +5,8 @@
   <section>
     <h3>Used in projects</h3>
     <ul class='projects names' data-bind='foreach: projects, click: $root.selectProject'>
-      <li class='project name clickable' data-bind='text: name'></li>
+      <li class='project name clickable' title='show details about this project'
+          data-bind='text: name'></li>
     </ul>
   </section>
 </article>
