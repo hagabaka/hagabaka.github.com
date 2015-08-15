@@ -22,6 +22,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  justify-content: space-around;
 }
 #popup {
   position: fixed;
@@ -218,8 +219,11 @@ li.clickable:hover, main article.project:hover {
 }
 
 @media (min-width: 80rem) {
-  main article {
+  main article.project {
     width: calc(50% - 2rem);
+  }
+  main article.skill, main article.technology {
+    width: calc(33% - 3rem);
   }
   section {
     display: flex;
@@ -244,7 +248,7 @@ li.clickable:hover, main article.project:hover {
   #popup .screenshot {
     display: block;
     width: auto;
-    max-height: calc(100vh - 14ex);
+    max-height: calc(100vh - 18ex);
   }
   #popup #close::before {
     content: 'X';
