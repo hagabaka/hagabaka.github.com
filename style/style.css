@@ -7,6 +7,12 @@ html, body {
   padding: 0;
   background-color: beige;
 }
+* {
+  box-sizing: inherit;
+}
+html {
+  box-sizing: border-box;
+}
 body {
   display: flex;
   flex-flow: column;
@@ -20,32 +26,33 @@ main {
 #popup {
   position: fixed;
   z-index: 200;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  max-width: calc(100% - 10em);
+  left: 0;
+  right: 0;
+  bottom: 0;
   max-height: calc(100% - 10ex);
-  border: 1px solid darkCyan;
   background-color: ivory;
-  padding: 2rem;
+  padding: 0.5rem;
 }
-main.popup-visible, #popup:not(.top-most) {
+#popup article {
+  overflow: auto;
+}
+main.popup-visible {
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-#popup.project {
-  width: calc(100% - 2em);
+#popup:not(.top-most) {
+  -webkit-filter: blur(2px);
+  filter: blur(2px);
 }
 #popup .screenshot {
-  width: auto;
-  max-height: calc(100vh - 14ex);
+  display: none;
 }
 #popup #close {
   visibility: hidden;
 }
-#popup #close::after {
+#popup #close::before {
   visibility: visible;
-  content: 'X';
+  content: 'V';
   font-family: Raleway, sans-serif;
   font-size: 2rem;
   line-height: 2rem;
@@ -56,18 +63,17 @@ main.popup-visible, #popup:not(.top-most) {
   border-radius: 1rem;
   border: 1px solid darkCyan;
   position: absolute;
-  left: -1rem;
+  left: calc(50% - 2rem);
   top: -1rem;
   cursor: pointer;
 }
-#popup, #popup #close::after {
+#popup, #popup #close::before {
   box-shadow: 0 0 3px 2px darkGray;
 }
-
-@media (min-width: 80rem) {
-  main article {
-    width: calc(50% - 2rem);
-  }
+#popup::after {
+  content: '';
+  display: block;
+  clear: both;
 }
 
 main article {
@@ -106,10 +112,6 @@ h2 {
   display: inline;
   font-size: 1.5rem;
 }
-section {
-  display: flex;
-  align-items: baseline;
-}
 h3 {
   margin: 0 0.5rem 0 0;
   padding: 0;
@@ -141,10 +143,8 @@ main .skill .type, main .technology .type {
   float: left;
   border: 1px solid darkCyan;
 }
-.screenshot::after {
-  content: '';
-  display: block;
-  box-shadow: 0 0 2px -2px black;
+section.skills {
+  clear: both;
 }
 
 p {
@@ -215,5 +215,40 @@ a:hover, .clickable:hover {
 }
 li.clickable:hover, main article.project:hover {
   box-shadow: 0 0 1px darkCyan;
+}
+
+@media (min-width: 80rem) {
+  main article {
+    width: calc(50% - 2rem);
+  }
+  section {
+    display: flex;
+    align-items: baseline;
+  }
+  section.skills {
+    clear: none;
+  }
+  #popup {
+    top: 50%;
+    left: 50%;
+    bottom: auto;
+    right: auto;
+    transform: translate(-50%, -50%);
+    border: 1px solid darkCyan;
+    padding: 2rem;
+    max-width: calc(100% - 10em);
+  }
+  #popup.project {
+    width: calc(100% - 4rem);
+  }
+  #popup .screenshot {
+    display: block;
+    width: auto;
+    max-height: calc(100vh - 14ex);
+  }
+  #popup #close::before {
+    content: 'X';
+    left: -1rem;
+  }
 }
 
