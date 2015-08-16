@@ -49,24 +49,33 @@ main.popup-visible {
   display: none;
 }
 #popup #close {
-  visibility: hidden;
-}
-#popup #close::before {
-  visibility: visible;
-  content: 'V';
-  font-family: Raleway, sans-serif;
-  font-size: 2rem;
-  line-height: 2rem;
-  color: white;
-  background-color: darkCyan;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 1rem;
-  border: 1px solid darkCyan;
-  position: absolute;
+  /* hide the button, but keep it there for Firefox */
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: transparent;
   left: calc(50% - 2rem);
   top: -1rem;
+}
+#popup #close, #popup #close::before {
+  position: absolute;
+  width: 2rem;
+  height: 2rem;
+  font-size: 2rem;
+  line-height: 2rem;
+  border-radius: 1rem;
   cursor: pointer;
+}
+#popup #close::before {
+  content: 'V';
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  font-family: Raleway, sans-serif;
+  color: white;
+  background-color: darkCyan;
+  border: 1px solid darkCyan;
 }
 #popup, #popup #close::before {
   box-shadow: 0 0 3px 2px darkGray;
@@ -206,7 +215,7 @@ a, a:visited {
 }
 a, .clickable, main article.project {
   cursor: pointer;
-  transition-property: color, border-color; background-color, box-shadow;
+  transition-property: color, border-color, background-color, box-shadow;
   transition-duration: 400ms;
   transition-timing-function: ease;
 }
@@ -260,9 +269,11 @@ li.clickable:hover, main article.project:hover {
     width: auto;
     max-height: calc(100vh - 18ex);
   }
+  #popup #close {
+    left: -1rem;
+  }
   #popup #close::before {
     content: 'X';
-    left: -1rem;
   }
 }
 
