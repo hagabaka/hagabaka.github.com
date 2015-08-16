@@ -40,7 +40,7 @@ main {
       -ms-flex-pack: distribute;
           justify-content: space-around;
 }
-#popup {
+.popup {
   position: fixed;
   z-index: 200;
   left: 0;
@@ -50,21 +50,21 @@ main {
   background-color: ivory;
   padding: 0.5rem;
 }
-#popup article {
+.popup article {
   overflow: auto;
 }
 main.popup-visible {
   -webkit-filter: blur(4px);
   filter: blur(4px);
 }
-#popup:not(.top-most) {
+.popup:not(.top-most) {
   -webkit-filter: blur(2px);
   filter: blur(2px);
 }
-#popup .screenshot {
+.popup .screenshot {
   display: none;
 }
-#popup #close {
+.popup .close {
   /* hide the button, but keep it there for Firefox */
   background-color: transparent;
   border: none;
@@ -73,7 +73,7 @@ main.popup-visible {
   left: calc(50% - 2rem);
   top: -1rem;
 }
-#popup #close, #popup #close::before {
+.popup .close, .popup .close::before {
   position: absolute;
   width: 2rem;
   height: 2rem;
@@ -82,7 +82,7 @@ main.popup-visible {
   border-radius: 1rem;
   cursor: pointer;
 }
-#popup #close::before {
+.popup .close::before {
   content: 'V';
   top: 0;
   left: 0;
@@ -93,10 +93,10 @@ main.popup-visible {
   background-color: darkCyan;
   border: 1px solid darkCyan;
 }
-#popup, #popup #close::before {
+.popup, .popup .close::before {
   box-shadow: 0 0 3px 2px darkGray;
 }
-#popup::after {
+.popup::after {
   content: '';
   display: block;
   clear: both;
@@ -292,7 +292,7 @@ li.clickable:hover, main article.project:hover {
   section.skills {
     clear: none;
   }
-  #popup {
+  .popup {
     top: 50%;
     left: 50%;
     bottom: auto;
@@ -304,18 +304,18 @@ li.clickable:hover, main article.project:hover {
     padding: 2rem;
     max-width: calc(100% - 10em);
   }
-  #popup.project {
+  .popup.project {
     width: calc(100% - 4rem);
   }
-  #popup .screenshot {
+  .popup .screenshot {
     display: block;
     width: auto;
     max-height: calc(100vh - 18ex);
   }
-  #popup #close {
+  .popup .close {
     left: -1rem;
   }
-  #popup #close::before {
+  .popup .close::before {
     content: 'X';
   }
 }

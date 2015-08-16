@@ -18,7 +18,8 @@ requirejs.config({
   }
 });
 
-requirejs(['viewModel/components', 'viewModel/viewModel'], function(Components, ViewModel) {
+requirejs(['viewModel/components', 'viewModel/viewModel', 'viewModel/bindings'],
+function(Components, ViewModel) {
   var viewModel = new ViewModel();
   var components = new Components(viewModel);
   components.register();
