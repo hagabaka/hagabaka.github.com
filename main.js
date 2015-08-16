@@ -1,8 +1,10 @@
 requirejs.config({
   baseUrl: location.href.replace(/[^\/]*$/, ''),
   paths: {
-    jquery: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery',
-    knockout: 'https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug',
+    // jquery: 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery',
+    jquery: 'lib/jquery',
+    // knockout: 'https://cdnjs.cloudflare.com/ajax/libs/knockout/3.3.0/knockout-debug',
+    knockout: 'lib/knockout',
     text: 'lib/text',
     json: 'lib/json',
     domReady: 'lib/domReady',
