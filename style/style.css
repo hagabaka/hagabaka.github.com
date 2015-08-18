@@ -260,7 +260,7 @@ a:hover, .clickable:hover {
   border-color: darkSlateGray;
 }
 main article.project:hover {
-  background-color: aliceBlue;
+  background-color: paleGoldenRod;
 }
 a:hover, .clickable:hover {
 }
