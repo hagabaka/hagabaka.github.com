@@ -4,11 +4,14 @@
     A web application which displays and calculates information about items from a game
   story: |
     "Idol" is a new feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external},
-    involving hundreds of items and a scoring systemr. I built this application to help
+    involving hundreds of items and a scoring system. I built this application to help
     players understand the system, and refined its features based on player feedback.
 
     To speed up the development process, I created scripts which crawled the game website to
-    gather public information used in the application.
+    acquire images and text descriptions of the hundreds of items displayed in the application.
+    I utilized latest web technologies to enable the application to perform intensive
+    computations in the background while allowing the user to interact with the page without
+    delays.
   type: web application
   skills:
     - responsive design
