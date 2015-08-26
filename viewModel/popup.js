@@ -1,39 +1,32 @@
 define(['knockout'], function(ko) {
   var popups = ko.observableArray([]);
+  popups.subscribe(function(value) {
+    console.log(value);
+  });
   function PopupViewModel(params) {
     var self = this;
+    this.visible = params.visible;
     this.item = params.item;
     this.component = ko.pureComputed(function() {
-      return self.item().typeName;
+      if(self.item()) {
+        return self.item().typeName;
+      } else {
+        return null;
+      }
     });
     this.type = ko.pureComputed(function() {
-      return self.item().typeName;
-    });
-    if(this.item()) {
-      popups.push(self);
-    }
-    this.item.subscribe(function(value) {
-      if(value) {
-        popups.push(self);
-      }
+      return self.component() || params.type;
     });
     this.isTopMost = ko.pureComputed(function() {
-      return popups()[popups().length - 1] === self;
-    });
-    this.zIndex = ko.pureComputed(function() {
-      if(self.isTopMost()) {
-        return 120;
-      } else {
-        return 100;
-      }
+      return popups.indexOf(self) === 0;
     });
   }
   PopupViewModel.prototype.close = function() {
-    var self = this;
-    popups(popups().filter(function(popup) {
-      return popup !== self;
-    }));
-    this.item(null);
+    popups.remove(this);
+    this.visible(false);
+  };
+  PopupViewModel.prototype.bringToFront = function() {
+    popups.unshift(this);
   };
   PopupViewModel.popups = popups;
   return PopupViewModel;

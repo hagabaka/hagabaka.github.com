@@ -31,4 +31,46 @@ define(['knockout'], function(ko) {
       element['__ko__previousClassValue__'] = currentValue.concat();
     }
   };
+
+  ko.bindingHandlers.transitionVisible = {
+    init: function(element, valueAccessor) {
+      var showing = ko.unwrap(valueAccessor());
+      if(showing) {
+        element.dataset.displayState = 'shown';
+      } else {
+        element.dataset.displayState = 'hidden';
+      }
+      element.addEventListener('transitionend', function() {
+        switch(element.dataset.displayState) {
+          case 'showing':
+          case 'finishedShowing':
+          case 'shown':
+            element.dataset.displayState = 'shown';
+            break;
+          case 'hiding':
+          case 'finishedHiding':
+          case 'hidden':
+            element.dataset.displayState = 'hidden';
+            break;
+        }
+      });
+    },
+    update: function(element, valueAccessor) {
+      console.log(JSON.stringify(element.dataset.displayState));
+      var showing = ko.unwrap(valueAccessor());
+      if(showing) {
+        element.dataset.displayState = 'showing';
+        element.clientHeight;
+        element.dataset.displayState = 'finishedShowing';
+        element.clientHeight;
+      } else if(element.dataset.displayState === 'shown') {
+        element.dataset.displayState = 'hiding';
+        element.clientHeight;
+        element.dataset.displayState = 'finishedHiding';
+        element.clientHeight;
+      } else {
+        element.dataset.displayState = 'hidden';
+      }
+    }
+  };
 });

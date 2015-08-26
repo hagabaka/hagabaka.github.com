@@ -1,4 +1,5 @@
 @import url(fonts.css);
+@import url(popup.css);
 
 html, body {
   height: 100vh;
@@ -39,67 +40,6 @@ main {
   -webkit-justify-content: space-around;
       -ms-flex-pack: distribute;
           justify-content: space-around;
-}
-.popup {
-  position: fixed;
-  z-index: 200;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-height: calc(100% - 10ex);
-  background-color: ivory;
-  padding: 0.5rem;
-}
-.popup article {
-  overflow: auto;
-}
-main.popup-visible {
-  -webkit-filter: blur(4px);
-  filter: blur(4px);
-}
-.popup:not(.top-most) {
-  -webkit-filter: blur(2px);
-  filter: blur(2px);
-}
-.popup .screenshot {
-  display: none;
-}
-.popup .close {
-  /* hide the button, but keep it there for Firefox */
-  background-color: transparent;
-  border: none;
-  outline: none;
-  color: transparent;
-  left: calc(50% - 2rem);
-  top: -1rem;
-}
-.popup .close, .popup .close::before {
-  position: absolute;
-  width: 2rem;
-  height: 2rem;
-  font-size: 2rem;
-  line-height: 2rem;
-  border-radius: 1rem;
-  cursor: pointer;
-}
-.popup .close::before {
-  content: 'V';
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  font-family: Raleway, sans-serif;
-  color: white;
-  background-color: darkCyan;
-  border: 1px solid darkCyan;
-}
-.popup, .popup .close::before {
-  box-shadow: 0 0 3px 2px darkGray;
-}
-.popup::after {
-  content: '';
-  display: block;
-  clear: both;
 }
 
 main article {
@@ -292,32 +232,6 @@ li.clickable:hover, main article.project:hover {
   }
   section.skills {
     clear: none;
-  }
-  .popup {
-    top: 50%;
-    left: 50%;
-    bottom: auto;
-    right: auto;
-    -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    border: 1px solid darkCyan;
-    padding: 2rem;
-    max-width: calc(100% - 10em);
-  }
-  .popup.project {
-    width: calc(100% - 4rem);
-  }
-  .popup .screenshot {
-    display: block;
-    width: auto;
-    max-height: calc(100vh - 18ex);
-  }
-  .popup .close {
-    left: -1rem;
-  }
-  .popup .close::before {
-    content: 'X';
   }
 }
 

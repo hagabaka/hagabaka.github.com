@@ -5,10 +5,18 @@ function(Project, Keyword, Definition, pages, Popup, ko) {
     var self = this;
 
     this.pages = pages;
-    this.selectedProject = {item: ko.observable()};
-    this.selectedKeyword = {item: ko.observable()};
+    this.selectedProject = new Popup({
+      item: ko.observable(Project.list[0]),
+      type: 'project',
+      visible: ko.observable(false)
+    });
+    this.selectedKeyword = new Popup({
+      item: ko.observable(Keyword.list()[0]),
+      type: 'keyword',
+      visible: ko.observable(false)
+    });
     this.popupVisible = ko.pureComputed(function() {
-      return self.selectedProject.item() || self.selectedKeyword.item();
+      return self.selectedProject.visible() || self.selectedKeyword.visible();
     });
 
     function selectItem(event, component, type, page) {
@@ -16,8 +24,12 @@ function(Project, Keyword, Definition, pages, Popup, ko) {
       var data = ko.dataFor(event.target);
       if(data.typeName === 'project') {
         self.selectedProject.item(data);
+        self.selectedProject.visible(true);
+        self.selectedProject.bringToFront();
       } else if(data.typeName === 'keyword') {
         self.selectedKeyword.item(data);
+        self.selectedKeyword.visible(true);
+        self.selectedKeyword.bringToFront();
       }
       return false;
     }
