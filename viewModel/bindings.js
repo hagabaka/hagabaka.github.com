@@ -56,7 +56,6 @@ define(['knockout'], function(ko) {
       });
     },
     update: function(element, valueAccessor) {
-      console.log(JSON.stringify(element.dataset.displayState));
       var showing = ko.unwrap(valueAccessor());
       if(showing) {
         element.dataset.displayState = 'showing';

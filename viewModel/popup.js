@@ -1,8 +1,5 @@
 define(['knockout'], function(ko) {
   var popups = ko.observableArray([]);
-  popups.subscribe(function(value) {
-    console.log(value);
-  });
   function PopupViewModel(params) {
     var self = this;
     this.visible = params.visible;
