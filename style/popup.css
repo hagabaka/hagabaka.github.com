@@ -1,6 +1,6 @@
 .popup {
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
+  -webkit-transition-timing-function: ease;
+          transition-timing-function: ease;
   position: fixed;
   z-index: 100;
   left: 0;
@@ -10,27 +10,40 @@
   max-width: 100%;
   background-color: ivory;
   padding: 0.5rem;
-  transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
+      -ms-transform: scale(1, 1);
+          transform: scale(1, 1);
+  -webkit-transform-origin: bottom;
+      -ms-transform-origin: bottom;
+          transform-origin: bottom;
 }
 .popup[data-display-state='showing'],
 .popup[data-display-state='finishedHiding'],
-.popup[data-display-state='hidden'],
-{
-  max-height: 1px;
-  transform: scale(1, 0);
+.popup[data-display-state='hidden'] {
+  -webkit-transform: scale(1, 0);
+      -ms-transform: scale(1, 0);
+          transform: scale(1, 0);
 }
 .popup {
-  transition-property: none;
+  -webkit-transition-property: none;
+          transition-property: none;
+  -webkit-transition-duration: 0;
+          transition-duration: 0;
   display: none;
 }
 .popup[data-display-state] {
   transition-property: max-width, max-height, z-index,
+                       -moz-transform, -webkit-transform, -webkit-transform;
+  transition-property: max-width, max-height, z-index,
                        -moz-transform, -webkit-transform, transform;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
   display: block;
 }
 .popup[data-display-state='hidden'] {
   display: none;
-  transition-property: none;
+  -webkit-transition-property: none;
+          transition-property: none;
 }
 
 .popup.top-most {
@@ -103,16 +116,16 @@ main.popup-visible {
     padding: 2rem;
     max-width: calc(100% - 10em);
     max-height: calc(100vh - 4ex);
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
   }
   .popup[data-display-state='showing'],
   .popup[data-display-state='finishedHiding'],
-  .popup[data-display-state='hidden'],
-  {
+  .popup[data-display-state='hidden'] {
     -webkit-transform: translate(-50%, -50%) scale(0, 0);
         -ms-transform: translate(-50%, -50%) scale(0, 0);
             transform: translate(-50%, -50%) scale(0, 0);
-    max-width: 0;
-    max-height: 0;
   }
   .popup.project {
     width: calc(100% - 4rem);
