@@ -1,7 +1,7 @@
 -
   name: Dofus Idol Calculator
   description:
-    A web application which displays and calculates information about items from a game
+    A web application which displays and calculates information about items from the game Dofus
   story: |
     "Idol" is a new feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external},
     involving hundreds of items and a scoring system. I built this application to help
@@ -30,12 +30,12 @@
   url: http://hagabaka.github.com/dofus-idols
 -
   name: SDDM Configuration Editor
-  description: A system configuration tool
+  description: A graphical user interface to configure Simple Desktop Display Manager
   story: |
     [Simple Desktop Display Manager (SDDM)](http://github.com/sddm/sddm){:target:external} is a
     system software used by some Linux users. To configure it, a user had to manually edit text
-    configuration files. I created this application which presents the settings in a user-
-    friendly graphical interface.
+    configuration files. I created this application which presents the settings in a
+    user-friendly graphical interface.
 
     I announced this application to Linux desktop environment developers, some of whom
     have adopted it into their systems. I also responded to bug reports and feature requests
@@ -53,7 +53,7 @@
   url: https://github.com/hagabaka/sddm-config-editor
 -
   name: Dofus Dimensional Portals
-  description: A web application which displays periodically updated information
+  description: A web application which displays updated information posted by players of the game Dofus
   story: |
     The MMORPG [Dofus](http://www.dofus.com/){:target=external}' features "portals" which
     change location in the game and must be found by players. Some players started sharing
@@ -83,7 +83,7 @@
   url: http://dofusportal.net
 -
   name: Dofus Treasure Hunt Clues
-  description: A web application which displays images gathered from a web forum
+  description: A web application which displays images Dofus players posted from a web forum
   type: web appliction
   story: |
     Treasure hunt is a feature of the MMORPG [Dofus](http://www.dofus.com/){:target=external}'
@@ -116,7 +116,7 @@
   url: http://dofustreasure.net
 -
   name: Frogatto and Friends
-  description: Contributions to a videogame
+  description: Chinese Localization support for the video game Frogatto and Friends
   type: desktop application
   collaboration: true
   story: |
@@ -146,7 +146,7 @@
 -
   name: AOP International Exchange Services
   type: website
-  description: Website for a business
+  description: Bilingual business Website for AOP International Exchange Services
   story: |
     AOP International Exchange Services is an international education consulting company. I
     collaborated in the development of its business website. Since its clients include Chinese

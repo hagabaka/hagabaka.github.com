@@ -2,8 +2,6 @@
 @import url(popup.css);
 
 html, body {
-  height: 100vh;
-  width: 100vw;
   margin: 0;
   padding: 0;
   background-color: beige;
@@ -24,7 +22,7 @@ body {
           flex-flow: column;
 }
 main {
-  overflow-y: scroll;
+  overflow-y: auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -48,7 +46,7 @@ main article {
   width: 100%;
   box-shadow: 1px 1px 1px lightgray;
 }
-main article .story, main article .technologies {
+main article .story, main article .technologies, main article .skills {
   display: none;
 }
 
@@ -108,9 +106,9 @@ main .skill .type, main .technology .type {
   color: initial;
 }
 .screenshot {
-  width: 10rem;
-  margin: 0 1rem 0 0;
   float: left;
+  width: 25%;
+  margin: 0 1rem 0 0;
   border: 1px solid darkCyan;
 }
 section.skills {
@@ -209,11 +207,39 @@ li.clickable:hover, main article.project:hover {
   box-shadow: 0 0 1px darkCyan;
 }
 .photo {
-  float: left;
-  margin-right: 1em;
+  text-align: center;
   border-radius: 1em;
+  max-height: 30vh;
 }
+article::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
 @media (min-width: 60rem) {
+  main article .type {
+    display: block;
+  }
+  .photo {
+    float: left;
+    width: 20em;
+    margin: 0 2em 0 0;
+    max-height: initial;
+  }
+  p, ul {
+    margin: 3ex 0;
+  }
+  .photo + p {
+    margin-top: 0;
+  }
+  .screenshot {
+    margin: 0 2em 0 0;
+  }
+  main article {
+    max-width: 60%;
+    padding: 1.5em;
+  }
   main article.project {
     width: calc(50% - 2rem);
   }

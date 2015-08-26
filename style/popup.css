@@ -6,7 +6,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  max-height: calc(100% - 10ex);
+  max-height: calc(100vh - 10ex);
   max-width: 100%;
   background-color: ivory;
   padding: 0.5rem;
@@ -37,6 +37,7 @@
   z-index: 120;
 }
 .popup article {
+  max-height: calc(100vh - 10ex - 0.5em);
   overflow: auto;
 }
 main.popup-visible {

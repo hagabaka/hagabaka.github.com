@@ -1,13 +1,13 @@
 <article class='project' data-bind='attr: {id: id}, click: $root.selectProject'
          title='Show project details'>
+  <img class='screenshot' alt='screenshot' data-bind='attr: {src: screenshot}'>
+
   <h2>
     <a class='name url' title='Open the project site' target='project-site' 
        data-bind='text: name, attr: {href: url}'></a>
   </h2>
 
   <span class='type' data-bind='text: type'></span>
-
-  <img class='screenshot' alt='screenshot' data-bind='attr: {src: screenshot}'>
 
   <p class='description' data-bind='text: description'></p>
   <div class='story' data-bind='html: story'></div>
