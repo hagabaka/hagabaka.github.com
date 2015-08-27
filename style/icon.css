@@ -9,14 +9,13 @@
 	font-style: normal;
 }
 
-.contact dt {
+.contact dt, .popup .close::before, .popup .close {
   text-transform: lowercase;
 
 	font-family: 'icomoon';
 	font-style: normal;
 	font-weight: normal;
 	font-variant: normal;
-	line-height: 1;
 	
 	/* Enable Ligatures ================ */
 	letter-spacing: 0;
