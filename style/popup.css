@@ -95,7 +95,7 @@ main.popup-visible {
   border: 1px solid darkCyan;
 }
 .popup, .popup .close::before {
-  box-shadow: 0 0 3px 2px darkGray;
+  box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
 }
 .popup::after {
   content: '';
