@@ -144,7 +144,8 @@ ul.contributions {
 nav {
   box-shadow: 0 5px 5px -3px lightGray;
   z-index: 100;
-  background-color: ivory;
+  background-color: darkCyan;
+  color: floralwhite;
 }
 .pages.names {
   display: -webkit-box;
@@ -176,10 +177,10 @@ nav .label {
   width: 100%;
   text-align: center;
   padding: 0.5ex 0;
+  border-bottom: 2px solid transparent;
 }
 nav :checked + .label {
-  color: darkCyan;
-  box-shadow: 0 5px 5px -4px darkCyan;
+  border-bottom-color: goldenRod;
 }
 
 a, a:visited {
@@ -195,15 +196,12 @@ a, .clickable, main article.project {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
-a:hover, .clickable:hover {
-  background-color: lightSkyBlue;
-  color: darkSlateGray;
-  border-color: darkSlateGray;
+a:hover, .clickable:hover, .project a.url:hover {
+  background-color: darkCyan;
+  color: azure;
 }
 main article.project:hover {
   background-color: paleGoldenRod;
-}
-a:hover, .clickable:hover {
 }
 li.clickable:hover, main article.project:hover {
   box-shadow: 0 0 1px darkCyan;
