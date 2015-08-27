@@ -1,5 +1,6 @@
 @import url(fonts.css);
 @import url(popup.css);
+@import url(icon.css);
 
 html, body {
   margin: 0;
@@ -220,6 +221,26 @@ article::after {
   content: '';
   display: block;
   clear: both;
+}
+.contact {
+  margin: 0;
+  padding: 0;
+}
+.contact dt, .contact dd {
+  color: darkSlateGray;
+  display: inline;
+  line-height: 4ex;
+  vertical-align: middle;
+  margin: 0 0.5em 0.5ex 0;
+  padding: 0;
+}
+.contact dt::before {
+  line-height: 0;
+  content: '';
+  display: block;
+}
+.contact dt:first-child::before {
+  display: none;
 }
 
 @media (min-width: 60rem) {
