@@ -225,6 +225,7 @@ article::after {
 .contact {
   margin: 0;
   padding: 0;
+  clear: both;
 }
 .contact dt, .contact dd {
   color: darkSlateGray;
@@ -282,6 +283,9 @@ article::after {
             align-items: baseline;
   }
   section.skills {
+    clear: none;
+  }
+  .contact {
     clear: none;
   }
 }
