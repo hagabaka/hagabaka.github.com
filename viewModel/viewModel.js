@@ -1,12 +1,12 @@
-define(['viewModel/project', 'viewModel/keyword', 'viewModel/definition', 'viewModel/pages',
+define(['viewModel/projects', 'viewModel/keyword', 'viewModel/definition', 'viewModel/pages',
         'viewModel/popup', 'knockout'],
-function(Project, Keyword, Definition, pages, Popup, ko) {
+function(projects, Keyword, Definition, pages, Popup, ko) {
   return function ViewModel() {
     var self = this;
 
     this.pages = pages;
     this.selectedProject = new Popup({
-      item: ko.observable(Project.list[0]),
+      item: ko.observable(projects[0]),
       type: 'project',
       visible: ko.observable(false)
     });
