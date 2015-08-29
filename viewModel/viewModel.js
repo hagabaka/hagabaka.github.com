@@ -19,29 +19,20 @@ function(projects, Keyword, Definition, pages, Popup, ko) {
       return self.selectedProject.visible() || self.selectedKeyword.visible();
     });
 
-    function selectItem(event, component, type, page) {
+    function selectItem(event, popupViewModel) {
       var target = event.target;
       var data = ko.dataFor(event.target);
-      if(data.typeName === 'project') {
-        self.selectedProject.item(data);
-        self.selectedProject.visible(true);
-        self.selectedProject.bringToFront();
-      } else if(data.typeName === 'keyword') {
-        self.selectedKeyword.item(data);
-        self.selectedKeyword.visible(true);
-        self.selectedKeyword.bringToFront();
-      }
-      return false;
+      console.log(popupViewModel);
+      popupViewModel.item(data);
+      popupViewModel.visible(true);
+      popupViewModel.bringToFront();
+      event.stopPropagation();
     }
-    this.selectTechnology = function(_, event) {
-      selectItem(event, 'keyword', 'technology', 'technologies');
-    };
-    this.selectSkill = function(_, event) {
-      selectItem(event, 'keyword', 'skill', 'skills');
+    this.selectKeyword = function(_, event) {
+      selectItem(event, self.selectedKeyword);
     };
     this.selectProject = function(_, event) {
-      selectItem(event, 'project', 'project', 'projects');
-      return true;
+      selectItem(event, self.selectedProject);
     };
     this.activate = function() {
       ko.applyBindings(this);

@@ -1,8 +1,9 @@
-<article class='skill' data-bind='attr: {id: id}'>
-  <h2 class='technlogy name' data-bind='text: name'></h2>
+<article class='keyword' title='View related projects'
+                         data-bind='attr: {id: id}, click: $root.selectKeyword'>
+  <h2 class='keyword name' data-bind='text: name'></h2>
   <span class='type' data-bind='text: type'></span>
   <div class='definition' data-bind='html: definition'></div>
-  <section>
+  <section class='projects'>
     <h3>Used in projects</h3>
     <ul class='projects names' data-bind='foreach: projects, click: $root.selectProject'>
       <li class='project name clickable' title='show details about this project'

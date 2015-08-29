@@ -14,7 +14,7 @@
 
   <section class='skills'>
     <h3>Skills involved</h3>
-    <ul class='skills names' data-bind='foreach: skills, click: $root.selectSkill'>
+    <ul class='skills names' data-bind='foreach: skills, click: $root.selectKeyword'>
       <li class='skill name clickable' title='show details about this skill'
           data-bind='text: name'></li>
     </ul>
@@ -23,7 +23,7 @@
   <section class='technologies'>
     <h3>Technologies used</h3>
     <ul class='technologies names' data-bind='foreach: technologies,
-                                              click: $root.selectTechnology'>
+                                              click: $root.selectKeyword'>
       <li class='technology name clickable' title='show details about this technology'
           data-bind='text: name'></li>
     </ul>

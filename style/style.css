@@ -48,7 +48,7 @@ main article {
   width: 100%;
   box-shadow: 1px 1px 1px lightgray;
 }
-main article .story, main article .technologies, main article .skills {
+main article .story, main article .technologies, main article .skills, main article .projects {
   display: none;
 }
 
@@ -96,7 +96,7 @@ h3, .type {
   text-transform: lowercase;
   display: inline-block;
 }
-main .skill .type, main .technology .type {
+main .keyword .type {
   display: none;
 }
 .type::after {
@@ -187,7 +187,7 @@ a, a:visited {
   text-decoration: none;
   color: darkSlateGray;
 }
-a, .clickable, main article.project {
+a, .clickable, main article.project, main article.keyword {
   cursor: pointer;
   -webkit-transition-property: color, border-color, background-color, box-shadow;
           transition-property: color, border-color, background-color, box-shadow;
@@ -196,14 +196,15 @@ a, .clickable, main article.project {
   -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
 }
-a:hover, .clickable:hover, .project a.url:hover {
-  background-color: darkCyan;
-  color: azure;
+a:hover, .clickable:hover, .project a.url:hover, ul .names li.clickable:hover {
+  background-color: goldenRod;
+  color: floralWhite;
+  border-color: darkGoldenRod;
 }
-main article.project:hover {
+main article.project:hover, main article.keyword:hover {
   background-color: paleGoldenRod;
 }
-li.clickable:hover, main article.project:hover {
+li.clickable:hover, main article.project:hover, main article.keyword:hover {
   box-shadow: 0 0 1px darkCyan;
 }
 .photo {
@@ -267,7 +268,7 @@ article::after {
   main article.project {
     width: calc(50% - 2rem);
   }
-  main article.skill, main article.technology {
+  main article.keyword {
     width: calc(33% - 3rem);
   }
   section {
