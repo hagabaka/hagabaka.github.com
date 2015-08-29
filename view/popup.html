@@ -1,6 +1,8 @@
+<div class='overlay' data-bind='visible: visible'></div>
 <div class='popup' data-bind='transitionVisible: visible,
                               class: type,
                               css: {"top-most": isTopMost}'>
   <!-- ko component: {name: component, params: item} --><!-- /ko -->
   <button class='close' data-bind='click: close'>Close</button>
 </div>
+

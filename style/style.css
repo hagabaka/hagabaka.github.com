@@ -142,7 +142,7 @@ ul.contributions {
 }
 
 nav {
-  box-shadow: 0 5px 5px -3px lightGray;
+  box-shadow: 0 5px 5px -3px rgba(0, 0, 0, 0.3);
   z-index: 100;
   background-color: darkCyan;
   color: floralwhite;
