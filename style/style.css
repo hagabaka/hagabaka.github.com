@@ -78,6 +78,7 @@ h2 {
   padding: 0;
   display: inline;
   font-size: 1.5rem;
+  color: crimson;
 }
 h3 {
   margin: 0 0.5rem 0 0;
@@ -105,7 +106,7 @@ main .keyword .type {
 }
 .project a.url {
   text-decoration: initial;
-  color: initial;
+  color: inherit;
 }
 .screenshot {
   float: left;
