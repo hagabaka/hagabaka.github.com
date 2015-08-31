@@ -62,11 +62,12 @@ ul.names {
 }
 ul.names li {
   display: inline-block;
-  border: 1px solid darkGray;
+  border: 1px solid lightPink;
   background-color: snow;
   border-radius: 0.2em;
   padding: 0.2em;
   margin: 0.2ex 0;
+  color: darkRed;
 }
 li.project, li.technology {
   list-style: none;
