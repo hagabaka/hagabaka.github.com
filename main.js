@@ -1,3 +1,8 @@
+var hostname = 'yaohanchen.info';
+if(location.hostname !== hostname) {
+  location.url = location.protocol + '//' + hostname + location.pathname;
+}
+
 requirejs.config({
   baseUrl: location.href.replace(/[^\/]*$/, ''),
   paths: {
