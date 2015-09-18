@@ -27,7 +27,7 @@
     - RequireJS
     - Cheerio.JS
     - Git
-  url: http://hagabaka.github.com/dofus-idols
+  url: http://dofusidols.info/
 -
   name: SDDM Configuration Editor
   description: A graphical user interface to configure Simple Desktop Display Manager
