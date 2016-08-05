@@ -1,4 +1,31 @@
 -
+  name: GoBGOhio
+  description:
+    A web application which allows users to view and submit events, read news, and browse businesses
+  type: web, Android, and iOS application
+  story: |
+    GoBGOhio.com is a community calendar developed by
+    [Agile Oasis Technologies](http://www.agileoasis.com/){:target=external}. As part of the team, I
+    helped implement new features such as support for recurring events, and provided support and
+    maintenance for features such as subscription payments via PayPal. I also developed applications
+    for [Android](https://play.google.com/store/apps/details?id=com.agileoasis.app.gobgohio){:target=external}
+    and [iOS](https://itunes.apple.com/us/app/gobgohio/id1090151398){:target=external} which provide
+    convenient access to content from the website.
+  skills:
+    - front end development
+    - back end development
+    - Android development
+    - iOS development
+    - responsive design
+    - version control
+  technologies:
+    - PHP
+    - MySQL
+    - Java
+    - ObjectiveC 
+    - Git
+  url: https://www.gobgohio.com/
+-
   name: Dofus Idol Calculator
   description:
     A web application which displays and calculates information about items from the game Dofus
