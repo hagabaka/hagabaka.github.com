@@ -33,9 +33,6 @@ main {
   -webkit-flex-wrap: wrap;
       -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-  -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
 }
 
 main article {
@@ -43,6 +40,9 @@ main article {
   margin: 0.5rem;
   width: 100%;
   box-shadow: 1px 1px 1px lightgray;
+}
+main article:only-child {
+  margin: 0.5rem auto;
 }
 main article .story, main article .technologies, main article .skills, main article .projects {
   display: none;
@@ -264,10 +264,10 @@ article::after {
     padding: 1.5em;
   }
   main article.project {
-    width: calc(50% - 2rem);
+    width: calc(50% - 1rem);
   }
   main article.keyword {
-    width: calc(33% - 3rem);
+    width: calc(33% - 1rem);
   }
   section {
     display: -webkit-box;
